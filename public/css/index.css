@@ -1,0 +1,80 @@
+@import '../../node_modules/reset-css/reset.css';
+
+.container:before, .container:after {
+    content: "";
+    display: table;
+}
+.container:after {
+    clear: both;
+}
+.container {
+    background: #eaeaed;
+    *zoom: 1;
+    height: 100vh;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: black;
+}
+
+.fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.footer-item {
+    cursor: pointer;
+    flex: 1;
+    padding: .5rem 1rem;
+    text-align: center;
+    border-right: 1px solid lightgoldenrodyellow;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.footer-item:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.footer-item.active {
+    color: lightseagreen;
+    opacity: 1;
+}
+
+.footer-item.active:hover {
+    transform: none;
+}
+
+.home-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.home-container .card {
+    flex: 1;
+    min-height: 20vh;
+    text-align: center;
+    margin: .5em 1em;
+    font-size: 2em;
+    line-height: 14rem;
+    box-shadow: 10px 10px 30px -4px rgba(0,0,0,0.75);
+    transition: 0.3s;
+}
+
+.home-container .card:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.display-none {
+    display: none;
+}
